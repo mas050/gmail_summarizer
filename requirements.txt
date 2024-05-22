@@ -1,6 +1,6 @@
 streamlit==1.34.0
 groq
-email
+email~=6.0.0
 pytz
 beautifulsoup4
 re
