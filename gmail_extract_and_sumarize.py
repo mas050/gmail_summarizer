@@ -103,8 +103,6 @@ def summarize_email(email_content, model_selected, max_tokens=32000):
                 plain_text_chunk = extract_plain_text(email_message)
                 
                 # Modified Prompt
-                #st.write("--- Email chunk treated by a pass of the LLM llama3 ---")
-                #st.write(f"{plain_text_chunk}")
                 prompt = f"""
                         Summarize this part of the email exchange:
                         "{plain_text_chunk}"
@@ -125,9 +123,6 @@ def summarize_email(email_content, model_selected, max_tokens=32000):
 
         # If the content is within the limit, just summarize it as before
         else:
-            st.write("--- Email chunk treated by a pass of the LLM llama3 ---")
-            st.write(f"{email_content}")
-
             prompt = f"""
             Summarize all the email exchange so I can clearly understand the email thread. \
             Please make your summary a combination of all emails put together that explain and provide the full picture and tell the story of the emails exchange.\
