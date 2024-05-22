@@ -1,11 +1,5 @@
 streamlit==1.34.0
 groq
-google-api-python-client
-pandas
-matplotlib
-seaborn
-tabulate
-pyperclip
 imaplib
 email
 pytz
