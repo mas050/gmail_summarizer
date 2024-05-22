@@ -3,7 +3,6 @@ groq
 email==6.0.0a1
 pytz
 beautifulsoup4
-re
 tiktoken
 bs4
 email.header
