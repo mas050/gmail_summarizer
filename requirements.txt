@@ -1,0 +1,10 @@
+streamlit
+imaplib
+email
+pytz
+beautifulsoup4
+re
+groq
+tiktoken
+bs4
+email.header
