@@ -311,27 +311,13 @@ if st.button("Extract & Summarize"):
             email_content_str = "\n\n".join(email_content_list)  # Join emails with newlines
             
             LLM_Response = summarize_email(email_content_str, "llama3-70b-8192")
-            #st.write("--- Email string pass to the summarize function ---")
-            #st.write(f"{email_content_str}")
 
             # Improved Summary Display with Text Wrapping
+            st.write("---")
+            st.write("\n")
             st.subheader("Email Thread Summary:")
-            with st.expander("See Full Summary", expanded=True):
-                summary_container = st.container()  # Create a container
-                with summary_container:
-                    st.markdown(LLM_Response, unsafe_allow_html=True)
 
-                # Add custom CSS to enable text wrapping
-                st.markdown(
-                    """
-                    <style>
-                    div.stMarkdown p {
-                        white-space: normal;
-                    }
-                    </style>
-                    """,
-                    unsafe_allow_html=True,
-                )
+            display_output = st.text_area("\n", value=LLM_Response, height=500)
     else:
         st.write("No emails found matching the criteria.")
     
